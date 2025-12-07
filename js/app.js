@@ -111,23 +111,23 @@ function placePiece(index) {
 
 function checkForWinner() {
     for (let i = 0; i < winningCombos.length; i++) {
-        for (let j = 0; j < winningCombos[i].length; j++) {
+        // for (let j = 0; j < winningCombos[i].length; j++) {
 
-            if(j === 0) {
-                if(board[winningCombos[i][j]] === '') {
+            // if(j === 0) {
+                if(board[winningCombos[i][0]] === '') {
                     // continue;
                 }
-                else if (board[winningCombos[i][j]] === 'X' || board[winningCombos[i][j]] === 'O') {
-                    if (board[winningCombos[i][j]] === board[winningCombos[i][j+1]]) {
-                        if (board[winningCombos[i][j]] === board[winningCombos[i][j+2]]) {
+                else if (board[winningCombos[i][0]] === 'X' || board[winningCombos[i][0]] === 'O') {
+                    if (board[winningCombos[i][0]] === board[winningCombos[i][1]]) {
+                        if (board[winningCombos[i][0]] === board[winningCombos[i][2]]) {
                             winner = true;
                             // console.log(`Winner! ${winner}`);
                         }
                     }
 
                 }
-            }   
-        }
+            // }   
+        // }
     }
 }
 
